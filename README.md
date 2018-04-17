@@ -14,9 +14,13 @@ $('.sticky-demo').sticky();
 
 ```javascript
 $('.sticky-demo').sticky({
-  offset: {
-    top: 10 // 开启吸顶，吸顶时到顶部距离为 10px
-  }
+  offset: 10 // 开启吸顶，吸顶时到顶部距离为 10px
+});
+
+// or
+
+$('.sticky-demo').sticky({
+  offsetTop: 10 // 开启吸顶，吸顶时到顶部距离为 10px
 });
 ```
 
@@ -24,9 +28,7 @@ $('.sticky-demo').sticky({
 
 ```javascript
 $('.sticky-demo').sticky({
-  offset: {
-    bottom: 10 // 开启吸顶，吸顶时到顶部距离为 10px
-  }
+  offsetBottom: 10 // 开启吸顶，吸顶时到顶部距离为 10px
 });
 ```
 
