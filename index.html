@@ -9,11 +9,12 @@
 </head>
 <body>
   <h1>Sticky</h1>
-  <div class="nav-example" data-offset="40">
+  <div style="height: 200px;">占位，为了演示</div>
+  <div id="stickyDemo1" class="nav-example" data-offset="10">
     <p>向下滚动，我会吸在顶部</p>
   </div>
   <div style="height: 1000px;">占位，为了演示</div>
-  <div class="nav-example nav-example-bottom" data-offset-bottom="0">
+  <div id="stickyDemo2" class="nav-example nav-example-bottom">
     <p>吸底效果，向下滚动，清除吸底效果</p>
   </div>
   <div style="height: 1000px;">占位，为了演示吸底效果</div>
@@ -24,7 +25,10 @@
     crossorigin="anonymous"></script>
   <script src="dist/sticky.js"></script>
   <script>
-    $('.nav-example').sticky();
+    $('#stickyDemo1').sticky();
+    $('#stickyDemo2').sticky({
+      offsetBottom: 10
+    });
     $('.nav-example')
       .on('top.fe.sticky', function() {
         $(this).html('<p>吸顶状态</p>')
