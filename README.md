@@ -58,7 +58,9 @@ $('.sticky-demo').sticky({
 
 Name | Type | Default | Description
 ---- | ---- | ------- | -----------
-offset | number|object | `{top:0}` | 用来设置吸顶和吸底的距离
+offset | number or object | `{top:0}` | 用来设置吸顶和吸底的距离，格式 `{top: 10, bottom: 20}` ，其中 `top` 和 `bottom` 还可以是函数
+offsetTop | number or function | 无 | 设置吸顶距离
+offsetBottom | number or function | 无 | 设置吸底距离
 
 ## Methods
 
