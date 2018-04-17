@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sticky</title>
+  <link rel="stylesheet" href="docs/index.css">
+</head>
+<body>
+  <h1>Sticky</h1>
+  <div class="nav-example" data-offset="40">
+    <p>向下滚动，我会吸在顶部</p>
+  </div>
+  <div style="height: 1000px;">占位，为了演示</div>
+  <div class="nav-example nav-example-bottom" data-offset-bottom="0">
+    <p>吸底效果，向下滚动，清除吸底效果</p>
+  </div>
+  <div style="height: 1000px;">占位，为了演示吸底效果</div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="dist/sticky.js"></script>
+  <script>
+    $('.nav-example').sticky();
+    $('.nav-example')
+      .on('top.fe.sticky', function() {
+        $(this).html('<p>吸顶状态</p>')
+      })
+      .on('bottom.fe.sticky', function() {
+        $(this).html('<p>吸底状态</p>')
+      })
+      .on('off.fe.sticky', function() {
+        $(this).html('<p>常规状态</p>')
+      })
+  </script>
+</body>
+</html>

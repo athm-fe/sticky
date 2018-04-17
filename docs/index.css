@@ -1,0 +1,10 @@
+.nav-example {
+  width: 300px;
+  padding: 10px;
+  background: #fcfaf0;
+  border: 1px solid #f60;
+  z-index: 1000;
+}
+.nav-example-bottom {
+  border-color: blue;
+}
